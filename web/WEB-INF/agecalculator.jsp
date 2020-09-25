@@ -14,7 +14,7 @@
             <input type="submit" value="Age next birthday">
             <p>${allAge}</p>
             <p>${error}</p>
-            <a href = "/WEB-INF/arithmeticcalculator.jsp">Arithmetic Calculator</a>
+            <a href = "/Week2Lab_Calculators/arithmetic">Arithmetic Calculator</a>
         </form>
     </body>
 </html>
