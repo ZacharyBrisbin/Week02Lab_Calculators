@@ -19,6 +19,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet
         
     }
 
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
@@ -27,6 +28,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet
         String secondnum = request.getParameter("second_num");
         String action = request.getParameter("arithmetic");
         int arithmetic = 0;
+        
         
         request.setAttribute("firstnum", firstnum);
         request.setAttribute("secondnum", secondnum);
@@ -55,6 +57,9 @@ public class ArithmeticCalculatorServlet extends HttpServlet
                 case "%":
                     arithmetic = Integer.parseInt(firstnum) % Integer.parseInt(secondnum);
                     request.setAttribute("result", " " + arithmetic);
+                    break;
+                default:
+                    request.setAttribute("result", " ---");
                     break;
             }
         }
